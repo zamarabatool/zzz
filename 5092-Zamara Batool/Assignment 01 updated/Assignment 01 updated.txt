@@ -1,0 +1,251 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+             //section 1//
+             //part 1//
+             Console.WriteLine("Hello,World!");
+             //part 2//
+             Console.WriteLine("Please enter your name:");
+             string Name = Console.ReadLine();
+             Console.WriteLine("Hello, " + Name);
+             //part 3//
+             Console.WriteLine("Enter 1st number:");
+             int no1 = int.Parse(Console.ReadLine());
+             Console.WriteLine("Enter 2nd number:");
+             int no2 = int.Parse(Console.ReadLine());
+             int sum = no1 + no2;
+             Console.WriteLine("Sum =" + sum);
+             //part 4//
+             Console.WriteLine("Enter the number:");
+             int no = int.Parse(Console.ReadLine());
+             Console.WriteLine("The square of " + no + " is = " + no * no);
+             //part 5//
+             for (int i = 0; i <= 100; i++)
+                 if (i % 2 == 0)
+                     Console.WriteLine(i);
+             //section 2//
+             //part 6//
+             int sumnum_ = 0;
+             Console.WriteLine("Enter the number:");
+             int sumnum = int.Parse(Console.ReadLine());
+             for (int i = 1; i <= sumnum; i++)
+                 sumnum_ = sumnum_ + i;
+             Console.WriteLine("The sum of all numbers till " + sumnum + " is: " + sumnum_);
+             //part 7//
+             Console.WriteLine("Enter the number:");
+             int tableno=int.Parse(Console.ReadLine());
+             for (int i = 1; i <= 12; i++)
+                     Console.WriteLine(tableno + " X " + i + " = " + i * tableno);
+             //part 8//
+             bool isaprimeno = true;
+             Console.WriteLine("Enter the number:");
+             int primeno = int.Parse(Console.ReadLine());
+             for (int i = 2; i <= primeno; i++)
+             {
+
+                 for (int j = 2; j < i; j++)
+                 {
+                     if (i % j == 0)
+                         isaprimeno = false;
+                     break;
+
+                 }
+                 if (isaprimeno == true)
+                     Console.WriteLine(i);
+                 isaprimeno = true;
+             }
+             //part 9//
+             int factnum_ = 1;
+             Console.WriteLine("Enter the number:");
+             int factnum = int.Parse(Console.ReadLine());
+             for (int i = 1; i <= factnum; i++)
+                 factnum_ = factnum_ * i;
+             Console.WriteLine(factnum + "! = " + factnum_);
+             //part 10//
+             int x = 0;
+             int y = 1;
+             Console.WriteLine("Enter the number of terms of seies:");
+            
+             int fabnum = int.Parse(Console.ReadLine());
+           
+             for (int i = 0; i < fabnum; i++)
+             {
+                 Console.WriteLine(x);
+               
+                 int z = x;
+                 x = y;
+                 y = z + y;
+             }
+             //Section 3//
+             //part 11//
+             Console.WriteLine("Write the number: ");
+             int n = int.Parse(Console.ReadLine());
+             int[] Array = { 1, 3, 5, 7, 9 };
+             int x = 0;
+             foreach (int i in Array)
+             {
+                 if (i == n)
+                     x = x + 1;
+
+                 else
+                     x = x + 0;
+             }
+             if (x > 0)
+                 Console.WriteLine("This number is in the array");
+             else
+                 Console.WriteLine("This number is not in the array");
+             Console.WriteLine("Write the number: ");
+              int n= int.Parse(Console.ReadLine());
+              int[] Array = { 1, 3, 5, 7, 9 };
+              int x = 0;
+              foreach(int i in Array)
+              {
+                  if (i == n)
+                      x = x + 1;
+
+                  else
+                      x = x + 0;
+              }
+              if (x > 0)
+                  Console.WriteLine("This number is in the array");
+              else
+                  Console.WriteLine("This number is not in the array");
+             //part 12//
+             Console.WriteLine("Write the word: ");
+             string word = (Console.ReadLine());
+             string rev = "";
+             for (int i = word.Length - 1; i >= 0; i--) 
+             {
+                 rev = rev + word[i];
+             }
+             if (word == rev)
+                 Console.WriteLine("This word is palindrome");
+             else
+                 Console.WriteLine("This word is not a palindrome");
+             //part 13//
+             int[] Aray_ = { 10, 9, 5, 3, 2 };
+             //int[] x = { Array.Sort(Aray_) };//
+             Array.Sort(Aray_);
+             int[] x = Aray_;
+             Console.WriteLine("smallest number= "+x[0]);
+             Console.WriteLine("largest number= " + x[x.Length-1]);
+            //part 14//
+            Console.WriteLine("Write the height: ");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                Console.WriteLine("");
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write("*");
+                }
+            }
+            //part 15// 
+            Console.WriteLine("Hello World!");
+            Console.WriteLine("Write the height: ");
+            int h = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= h; i++)
+            {
+                Console.WriteLine(new string(' ', h - i) + new string('*', (2 * i) - 1));
+            }
+
+            //part 16//
+            Console.WriteLine("Please enter the string:");
+            string st = Console.ReadLine();
+            string rev = "";
+            int y = st.Length;
+            for (int i = y - 1; i >= 0; i = i - 1)
+                rev = rev + st[i];
+            Console.WriteLine(rev);
+            //part 17//
+            Console.WriteLine("Write length of array: ");
+            int n = int.Parse(Console.ReadLine());
+            int[] numbers = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine("Write number of array: ");
+                int x = int.Parse(Console.ReadLine());
+                numbers[i] = x;
+            }
+
+
+
+            Array.Sort(numbers);
+            foreach (int j in numbers)
+            {
+                Console.WriteLine(j);
+            }
+
+            //part 18//
+            int d = 0;
+            Console.WriteLine("Please enter the number:");
+            int nu = int.Parse(Console.ReadLine());
+            for (int i = 1; i < nu; i++)
+            {
+                if (nu % i == 0)
+                    d = d + i;
+                else
+                    d = d + 0;
+
+            }
+            if (d == nu)
+                Console.WriteLine("It is a perfect number");
+            else
+                Console.WriteLine("It is a not perfect number");
+            //part 19//
+            Console.WriteLine("Write the height: ");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                Console.WriteLine("");
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(j);
+                }
+            }
+            //part 20//
+            string LCS = "";
+            Console.WriteLine("Enter first string");
+            //Input a string
+            String first = Console.ReadLine();
+            //Input a string
+            Console.WriteLine("Enter Second string");
+            String second = Console.ReadLine();
+            char[] Array1 = first.ToCharArray();
+            char[] Array2 = second.ToCharArray();
+
+            
+            int k = 0;
+            for( int i = 0; i < Array1.Length; i++)
+            { for (int j = k; j < Array2.Length; j++)
+                {
+                    //common subsequence 
+                    if (Array1[i] == Array2[j])
+                    {
+                        LCS = LCS + Array1[i];
+                        k = j + 1;
+
+                    }
+                
+               
+            }
+            Console.WriteLine(LCS);
+
+
+
+
+
+            Console.ReadKey();
+        }
+    }
+}
